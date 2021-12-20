@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.Scratch" parent="@style/Theme.Leanback" />
+</resources>
