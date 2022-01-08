@@ -45,6 +45,7 @@ class MainFragment : BrowseSupportFragment() {
     private lateinit var mMetrics: DisplayMetrics
     private var mBackgroundTimer: Timer? = null
     private var mBackgroundUri: String? = null
+    private lateinit var rowsAdapter:ArrayObjectAdapter
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -86,9 +87,19 @@ class MainFragment : BrowseSupportFragment() {
 
     private fun loadRows() {
 //        val tag:String? = "https://img.freepik.com/free-vector/shining-circle-purple-lighting-isolated-dark-background_1441-2396.jpg?size=626&ext=jpg"
-        val list = listOf<Movies>(Movies("https://images.unsplash.com/photo-1639862567638-57d4bfb03861?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODIwNjJ8MHwxfGFsbHwzfHx8fHx8Mnx8MTYzOTk3NzEwOA&ixlib=rb-1.2.1&q=80&w=200","Good Movie","Gibrish"),Movies("https://img.freepik.com/free-vector/shining-circle-purple-lighting-isolated-dark-background_1441-2396.jpg?size=626&ext=jpg","Bad Movie","HMMMMM"))
 
-        val rowsAdapter = ArrayObjectAdapter(ListRowPresenter())
+        rowsAdapter = ArrayObjectAdapter(ListRowPresenter())
+        Handler().postDelayed({
+            createRows()
+            startEntranceTransition()
+        }, 500)
+
+
+    }
+
+    private fun createRows(){
+
+        val list = listOf<Movies>(Movies("https://images.unsplash.com/photo-1639862567638-57d4bfb03861?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyODIwNjJ8MHwxfGFsbHwzfHx8fHx8Mnx8MTYzOTk3NzEwOA&ixlib=rb-1.2.1&q=80&w=200","Good Movie","Gibrish"),Movies("https://img.freepik.com/free-vector/shining-circle-purple-lighting-isolated-dark-background_1441-2396.jpg?size=626&ext=jpg","Bad Movie","HMMMMM"))
         val cardPresenter = CardPresenter()
 
         for (i in 0 until 2) {
