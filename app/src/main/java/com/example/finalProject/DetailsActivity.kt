@@ -1,4 +1,4 @@
-package com.example.scratch
+package com.example.finalProject
 
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity

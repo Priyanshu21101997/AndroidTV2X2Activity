@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2604166666666667" />
+        <entry key="../../.gradle/caches/transforms-3/69e818d2ac6fd35b6a29ff132bd71d3c/transformed/leanback-1.0.0/res/drawable/lb_background.xml" value="0.26145833333333335" />
+        <entry key="app/src/main/res/drawable/default_background.xml" value="0.26145833333333335" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.14855072463768115" />
       </map>
     </option>
